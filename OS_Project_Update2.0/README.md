@@ -95,7 +95,7 @@ gcc -O2 -std=c17 -Wall -Wextra mkfs_adder.c   -o mkfs_adder
 ./mkfs_builder --image fs.img --size-kib 4096 --inodes 256
 
 # 3) Add an existing text file
-echo "hello MiniVSFS" > file_13.txt
+echo "hello MiniVSFS" > file_13.txt  #DO NOT ECHO IT IF YOU HAVE SOMETHING INSIDE THE FILE. UF ECHOd THEN PREVIOUS CONTENTS WILL BE GONE
 ./mkfs_adder --input fs.img --output fs2.img --file file_13.txt
 ```
 
